@@ -29,7 +29,7 @@
   <style>
     body { background-color: #0B0B0E; color: #F5F5F7; overflow-x: hidden; }
     
-    /* Animación Carrusel Infinito de Marcas (Más lenta y fluida) */
+    /* Animación Carrusel Infinito de Marcas (Lento y fluido) */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -47,6 +47,16 @@
     .carousel-slide {
       transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
     }
+
+    /* Efecto de destello y zoom en tarjetas de marcas */
+    .brand-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .brand-card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 25px rgba(255, 184, 0, 0.35);
+      border-color: rgba(255, 184, 0, 0.6);
+    }
   </style>
 </head>
 <body class="font-sans antialiased selection:bg-tpYellow selection:text-black">
@@ -59,7 +69,7 @@
     </div>
   </div>
 
-  <!-- HEADER / NAVBAR (Sin barra de búsqueda chica) -->
+  <!-- HEADER / NAVBAR (Sin barra de búsqueda) -->
   <header class="sticky top-0 z-50 bg-tpBlack/90 backdrop-blur-lg border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
       
@@ -203,7 +213,7 @@
     </div>
   </section>
 
-  <!-- BLOQUE DE BÚSQUEDA PRINCIPAL (Única barra) -->
+  <!-- BLOQUE DE BÚSQUEDA PRINCIPAL (Única barra debajo del carrusel) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
     <div class="bg-tpCard border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto text-center space-y-4">
       <h3 class="font-display text-2xl font-bold uppercase text-white">Buscar productos por nombre o código</h3>
@@ -289,15 +299,15 @@
     </div>
   </section>
 
-  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Sin fondo blanco, logos más grandes y paso más lento) -->
+  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Tarjetas oscuras, zoom y destello) -->
   <section id="marcas" class="py-14 my-8 bg-tpDark border-y border-white/10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
       <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Marcas Líderes & Repuestos Originales</span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-white mt-1">Trabajamos con las mejores marcas del mercado</h2>
     </div>
-    <div class="relative w-full overflow-hidden py-6">
-      <div class="animate-marquee gap-8 items-center">
-        <div id="brands-track" class="flex gap-8 items-center px-4"></div>
+    <div class="relative w-full overflow-hidden py-8">
+      <div class="animate-marquee gap-6 items-center">
+        <div id="brands-track" class="flex gap-6 items-center px-4"></div>
       </div>
     </div>
   </section>
@@ -479,11 +489,11 @@
       track.innerHTML = listaDoble.map(m => `
         <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
            target="_blank"
-           class="bg-transparent hover:bg-white/5 transition-all duration-300 rounded-2xl px-6 py-4 min-w-[190px] h-28 flex flex-col items-center justify-center group shrink-0 border border-white/5 hover:border-tpYellow/50">
+           class="brand-card bg-[#14151B] hover:bg-[#1C1E26] transition-all duration-300 rounded-3xl p-6 min-w-[200px] h-32 flex flex-col items-center justify-center shrink-0 border border-white/10">
           <img src="https://www.google.com/s2/favicons?domain=${m.domain}&sz=256" 
                alt="${m.name}" 
-               class="h-12 w-auto object-contain mb-2 group-hover:scale-110 transition filter brightness-110">
-          <span class="font-display font-bold text-sm uppercase tracking-wider text-neutral-300 group-hover:text-tpYellow transition">${m.name}</span>
+               class="h-10 w-auto object-contain mb-2 filter brightness-125">
+          <span class="font-display font-bold text-sm uppercase tracking-wider text-neutral-300">${m.name}</span>
         </a>
       `).join('');
     }
