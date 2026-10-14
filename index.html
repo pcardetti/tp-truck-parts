@@ -29,7 +29,7 @@
   <style>
     body { background-color: #0B0B0E; color: #F5F5F7; overflow-x: hidden; }
     
-    /* Animación Carrusel Infinito de Marcas */
+    /* Animación Carrusel Infinito de Marcas (Más lenta y fluida) */
     @keyframes marquee {
       0% { transform: translateX(0%); }
       100% { transform: translateX(-50%); }
@@ -37,7 +37,7 @@
     .animate-marquee {
       display: flex;
       width: max-content;
-      animation: marquee 38s linear infinite;
+      animation: marquee 55s linear infinite;
     }
     .animate-marquee:hover {
       animation-play-state: paused;
@@ -59,7 +59,7 @@
     </div>
   </div>
 
-  <!-- HEADER / NAVBAR -->
+  <!-- HEADER / NAVBAR (Sin barra de búsqueda chica) -->
   <header class="sticky top-0 z-50 bg-tpBlack/90 backdrop-blur-lg border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
       
@@ -71,17 +71,6 @@
                class="h-12 sm:h-14 w-auto object-contain">
         </div>
       </a>
-
-      <!-- BUSCADOR RÁPIDO ESTILO REFERENCIA -->
-      <form onsubmit="buscarDesdeHeader(event)" class="hidden lg:flex flex-1 max-w-lg mx-6">
-        <div class="relative w-full">
-          <input id="header-search" type="text" placeholder="Buscar productos por nombre o código..." 
-                 class="w-full bg-[#14151B] border border-white/20 focus:border-tpYellow rounded-full pl-5 pr-12 py-3 text-sm text-white placeholder-neutral-400 outline-none transition shadow-inner">
-          <button type="submit" class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-tpYellow hover:bg-tpYellowHover text-black font-bold p-2.5 rounded-full transition" title="Buscar">
-            🔍
-          </button>
-        </div>
-      </form>
 
       <!-- NAV LINKS -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-neutral-300">
@@ -214,12 +203,12 @@
     </div>
   </section>
 
-  <!-- BLOQUE DE BÚSQUEDA SECUNDARIO DESTACADO (ESTILO LA REFERENCIA) -->
+  <!-- BLOQUE DE BÚSQUEDA PRINCIPAL (Única barra) -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
     <div class="bg-tpCard border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto text-center space-y-4">
       <h3 class="font-display text-2xl font-bold uppercase text-white">Buscar productos por nombre o código</h3>
       <form onsubmit="buscarDesdeBloque(event)" class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <input id="bloque-search" type="text" placeholder="Escribir búsqueda..." class="w-full sm:flex-1 bg-tpBlack border border-white/20 focus:border-tpYellow rounded-2xl px-5 py-3.5 text-sm text-white placeholder-neutral-400 outline-none transition">
+        <input id="bloque-search" type="text" placeholder="Escribir búsqueda (ej: W712, embrague Sachs, filtro aire...)" class="w-full sm:flex-1 bg-tpBlack border border-white/20 focus:border-tpYellow rounded-2xl px-5 py-3.5 text-sm text-white placeholder-neutral-400 outline-none transition">
         <button type="submit" class="w-full sm:w-auto bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-8 py-3.5 rounded-2xl text-sm uppercase tracking-wide transition shadow-md whitespace-nowrap">
           Buscar productos
         </button>
@@ -300,15 +289,15 @@
     </div>
   </section>
 
-  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS -->
+  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Sin fondo blanco, logos más grandes y paso más lento) -->
   <section id="marcas" class="py-14 my-8 bg-tpDark border-y border-white/10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
       <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Marcas Líderes & Repuestos Originales</span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-white mt-1">Trabajamos con las mejores marcas del mercado</h2>
     </div>
-    <div class="relative w-full overflow-hidden py-4">
-      <div class="animate-marquee gap-5 items-center">
-        <div id="brands-track" class="flex gap-5 items-center px-2"></div>
+    <div class="relative w-full overflow-hidden py-6">
+      <div class="animate-marquee gap-8 items-center">
+        <div id="brands-track" class="flex gap-8 items-center px-4"></div>
       </div>
     </div>
   </section>
@@ -490,11 +479,11 @@
       track.innerHTML = listaDoble.map(m => `
         <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
            target="_blank"
-           class="bg-white hover:bg-tpYellow transition-all duration-300 rounded-2xl px-6 py-4 min-w-[175px] h-24 flex flex-col items-center justify-center shadow-md group shrink-0 border-2 border-transparent hover:border-white">
-          <img src="https://www.google.com/s2/favicons?domain=${m.domain}&sz=128" 
+           class="bg-transparent hover:bg-white/5 transition-all duration-300 rounded-2xl px-6 py-4 min-w-[190px] h-28 flex flex-col items-center justify-center group shrink-0 border border-white/5 hover:border-tpYellow/50">
+          <img src="https://www.google.com/s2/favicons?domain=${m.domain}&sz=256" 
                alt="${m.name}" 
-               class="h-10 w-auto object-contain mb-1.5 group-hover:scale-110 transition">
-          <span class="font-display font-bold text-sm uppercase tracking-wider text-black">${m.name}</span>
+               class="h-12 w-auto object-contain mb-2 group-hover:scale-110 transition filter brightness-110">
+          <span class="font-display font-bold text-sm uppercase tracking-wider text-neutral-300 group-hover:text-tpYellow transition">${m.name}</span>
         </a>
       `).join('');
     }
@@ -538,14 +527,6 @@
     function reiniciarTimer() {
       clearInterval(timerCarrusel);
       timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
-    }
-
-    function buscarDesdeHeader(e) {
-      e.preventDefault();
-      const q = document.getElementById('header-search').value.trim();
-      if (!q) return;
-      const msg = `Hola TP Truck Parts! Estoy buscando: "${q}". ¿Tienen stock o equivalente?`;
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
     function buscarDesdeBloque(e) {
