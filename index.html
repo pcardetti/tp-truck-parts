@@ -29,13 +29,6 @@
   <style>
     body { background-color: #0B0B0E; color: #F5F5F7; overflow-x: hidden; }
     
-    /* Resplandor blanco nítido para que las letras negras del logo resalten sobre fondo oscuro */
-    .tp-logo-glow {
-      filter: drop-shadow(0px 0px 2px #FFFFFF) 
-              drop-shadow(0px 0px 4px #FFFFFF) 
-              drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.75));
-    }
-
     /* Animación Carrusel Infinito de Marcas */
     @keyframes marquee {
       0% { transform: translateX(0%); }
@@ -66,11 +59,11 @@
     </div>
   </div>
 
-  <!-- HEADER / NAVBAR CON TU LOGO REAL -->
+  <!-- HEADER / NAVBAR -->
   <header class="sticky top-0 z-50 bg-tpBlack/90 backdrop-blur-lg border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
       
-      <!-- LOGO OFICIAL IMGBB -->
+      <!-- LOGO OFICIAL -->
       <a href="#" class="flex items-center group">
         <div class="bg-white/95 hover:bg-white px-4 py-1.5 rounded-2xl shadow-[0_0_20px_rgba(255,184,0,0.25)] border-2 border-tpYellow transition transform group-hover:scale-105">
           <img src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" 
@@ -79,12 +72,12 @@
         </div>
       </a>
 
-      <!-- BUSCADOR RÁPIDO ESTILO MERCADO LIBRE EN EL HEADER -->
-      <form onsubmit="buscarDesdeHeader(event)" class="hidden lg:flex flex-1 max-w-md mx-6">
+      <!-- BUSCADOR RÁPIDO ESTILO REFERENCIA -->
+      <form onsubmit="buscarDesdeHeader(event)" class="hidden lg:flex flex-1 max-w-lg mx-6">
         <div class="relative w-full">
-          <input id="header-search" type="text" placeholder="Buscar repuesto, código OEM, filtro, marca..." 
-                 class="w-full bg-tpCard border border-white/15 focus:border-tpYellow rounded-full pl-5 pr-12 py-2.5 text-sm text-white placeholder-neutral-400 outline-none transition shadow-inner">
-          <button type="submit" class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-tpYellow hover:bg-tpYellowHover text-black font-bold p-2 rounded-full transition" title="Consultar en WhatsApp">
+          <input id="header-search" type="text" placeholder="Buscar productos por nombre o código..." 
+                 class="w-full bg-[#14151B] border border-white/20 focus:border-tpYellow rounded-full pl-5 pr-12 py-3 text-sm text-white placeholder-neutral-400 outline-none transition shadow-inner">
+          <button type="submit" class="absolute right-1.5 top-1/2 -translate-y-1/2 bg-tpYellow hover:bg-tpYellowHover text-black font-bold p-2.5 rounded-full transition" title="Buscar">
             🔍
           </button>
         </div>
@@ -98,7 +91,7 @@
         <a href="#contacto" class="hover:text-tpYellow transition">Mapa</a>
       </nav>
 
-      <!-- CTA WHATSAPP REDONDEADO -->
+      <!-- CTA WHATSAPP -->
       <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20consultar%20por%20repuestos%20para%20mi%20cami%C3%B3n." 
          target="_blank" rel="noopener noreferrer"
          class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold text-xs sm:text-sm px-5 py-3 rounded-full shadow-lg shadow-tpYellow/20 transition transform hover:-translate-y-0.5 flex items-center gap-2 whitespace-nowrap">
@@ -107,9 +100,9 @@
     </div>
   </header>
 
-  <!-- CARRUSEL PRINCIPAL ESTILO MERCADO LIBRE (6 SLIDES CON IMÁGENES) -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-8">
-    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 h-[380px] sm:h-[440px] bg-tpDark group">
+  <!-- CARRUSEL PRINCIPAL AMPLIO Y PROTAGONISTA -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
+    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 h-[420px] sm:h-[480px] bg-tpDark group">
       
       <!-- SLIDE 1: FRENOS Y AIRE -->
       <div class="carousel-slide absolute inset-0 opacity-100 z-10" data-slide="0">
@@ -156,60 +149,60 @@
         </div>
       </div>
 
-      <!-- SLIDE 4: EMBRAGUE Y TRANSMISIÓN (EATON / ZF / SACHS) -->
+      <!-- SLIDE 4: EMBRAGUE Y TRANSMISIÓN -->
       <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="3">
-        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1600&q=80" alt="Embragues y Cajas Eaton ZF Sachs" class="w-full h-full object-cover object-center brightness-50">
+        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1600&q=80" alt="Embragues y Cajas" class="w-full h-full object-cover object-center brightness-50">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
           <div class="p-8 sm:p-14 max-w-2xl space-y-4">
             <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">04 · Fuerza y Tracción</span>
             <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Embragues y <span class="text-tpYellow">Transmisión</span></h2>
             <p class="text-neutral-200 text-sm sm:text-lg">Kits de embrague Sachs, cajas y repuestos Eaton y ZF, servos, crapodinas y crucetas para trabajo pesado.</p>
             <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20EMBRAGUE%20Y%20TRANSMISI%C3%93N%20(Sachs%20/%20Eaton%20/%20ZF)." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Transmisión →</a>
+              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20EMBRAGUE%20Y%20TRANSMISI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Transmisión →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 5: LUBRICANTES, QUÍMICOS Y BATERÍAS -->
+      <!-- SLIDE 5: LUBRICANTES Y QUÍMICOS -->
       <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="4">
-        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80" alt="Lubricantes YPF Shell Valvoline Liqui Moly Baterías Moura" class="w-full h-full object-cover object-center brightness-50">
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80" alt="Lubricantes y Baterías" class="w-full h-full object-cover object-center brightness-50">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
           <div class="p-8 sm:p-14 max-w-2xl space-y-4">
             <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">05 · Insumos de Flota</span>
             <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Lubricantes, <span class="text-tpYellow">Moura y Würth</span></h2>
             <p class="text-neutral-200 text-sm sm:text-lg">Aceites y aditivos YPF, Shell, Valvoline, Liqui Moly, baterías Moura e insumos químicos Würth para talleres.</p>
             <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20LUBRICANTES%2C%20BATER%C3%8DAS%20MOURA%20O%20INSUMOS." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Consultar Insumos →</a>
+              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20LUBRICANTES%20Y%20BATER%C3%8DAS." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Consultar Insumos →</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SLIDE 6: SUSPENSIÓN, DIRECCIÓN E ILUMINACIÓN HELLA -->
+      <!-- SLIDE 6: SUSPENSIÓN E ILUMINACIÓN -->
       <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="5">
-        <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1600&q=80" alt="Suspensión TRW e Iluminación Hella" class="w-full h-full object-cover object-center brightness-50">
+        <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1600&q=80" alt="Suspensión e Iluminación" class="w-full h-full object-cover object-center brightness-50">
         <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
           <div class="p-8 sm:p-14 max-w-2xl space-y-4">
             <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">06 · Chasis y Cabina</span>
             <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Suspensión TRW e <span class="text-tpYellow">Iluminación Hella</span></h2>
             <p class="text-neutral-200 text-sm sm:text-lg">Fuelles neumáticos, amortiguadores, dirección TRW, faros Hella y accesorios para camiones y acoplados.</p>
             <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20SUSPENSI%C3%93N%2C%20DIRECCI%C3%93N%20O%20ILUMINACI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Repuestos →</a>
+              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20SUSPENSI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Repuestos →</a>
             </div>
           </div>
         </div>
       </div>
 
       <!-- FLECHAS DEL CARRUSEL -->
-      <button onclick="cambiarSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg">
+      <button onclick="cambiarSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg text-lg">
         ❮
       </button>
-      <button onclick="cambiarSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg">
+      <button onclick="cambiarSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg text-lg">
         ❯
       </button>
 
-      <!-- INDICADORES (PUNTITOS) -->
+      <!-- INDICADORES -->
       <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2.5 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full">
         <button onclick="irASlide(0)" class="carousel-dot w-6 h-2.5 rounded-full bg-tpYellow transition-all"></button>
         <button onclick="irASlide(1)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
@@ -221,7 +214,20 @@
     </div>
   </section>
 
-  <!-- BURBUJAS DE CATEGORÍAS CON IMÁGENES (ESTILO MERCADO LIBRE) -->
+  <!-- BLOQUE DE BÚSQUEDA SECUNDARIO DESTACADO (ESTILO LA REFERENCIA) -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="bg-tpCard border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto text-center space-y-4">
+      <h3 class="font-display text-2xl font-bold uppercase text-white">Buscar productos por nombre o código</h3>
+      <form onsubmit="buscarDesdeBloque(event)" class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <input id="bloque-search" type="text" placeholder="Escribir búsqueda..." class="w-full sm:flex-1 bg-tpBlack border border-white/20 focus:border-tpYellow rounded-2xl px-5 py-3.5 text-sm text-white placeholder-neutral-400 outline-none transition">
+        <button type="submit" class="w-full sm:w-auto bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-8 py-3.5 rounded-2xl text-sm uppercase tracking-wide transition shadow-md whitespace-nowrap">
+          Buscar productos
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BURBUJAS DE CATEGORÍAS -->
   <section id="categorias" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="flex items-center justify-between mb-8">
       <div>
@@ -294,26 +300,22 @@
     </div>
   </section>
 
-  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS CON LOGOS OFICIALES -->
+  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS -->
   <section id="marcas" class="py-14 my-8 bg-tpDark border-y border-white/10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
       <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Marcas Líderes & Repuestos Originales</span>
       <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-white mt-1">Trabajamos con las mejores marcas del mercado</h2>
     </div>
-
-    <!-- PISTA GIRATORIA INFINITA -->
     <div class="relative w-full overflow-hidden py-4">
       <div class="animate-marquee gap-5 items-center">
-        <!-- El JS duplica automáticamente estas tarjetas para giro infinito fluido -->
         <div id="brands-track" class="flex gap-5 items-center px-2"></div>
       </div>
     </div>
   </section>
 
-  <!-- COTIZADOR POR CHASIS + BENEFICIOS REDONDEADOS -->
+  <!-- COTIZADOR POR CHASIS -->
   <section id="cotizador" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-12 gap-10 items-center">
-      
       <div class="lg:col-span-5 space-y-6">
         <span class="inline-block bg-tpYellow/15 text-tpYellow border border-tpYellow/30 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase">Atención a Flotas, Talleres y Particulares</span>
         <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase text-white leading-tight">
@@ -340,7 +342,6 @@
         </div>
       </div>
 
-      <!-- TARJETA FORMULARIO REDONDEADA -->
       <div class="lg:col-span-7 bg-tpCard border-2 border-tpYellow/60 rounded-3xl p-6 sm:p-10 shadow-2xl">
         <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4 mb-6">
           <div>
@@ -391,7 +392,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN UBICACIÓN + GOOGLE MAPS INTERACTIVO -->
+  <!-- UBICACIÓN + MAPS -->
   <section id="contacto" class="bg-tpDark border-t border-white/10 py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-12 gap-8 items-center">
@@ -439,7 +440,7 @@
     </div>
   </section>
 
-  <!-- FOOTER CON TU LOGO -->
+  <!-- FOOTER -->
   <footer class="bg-tpBlack border-t border-white/10 py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
       <div class="flex items-center gap-4">
@@ -454,11 +455,10 @@
     </div>
   </footer>
 
-  <!-- SCRIPTS CARRUSEL, MARCAS Y WHATSAPP -->
+  <!-- SCRIPTS -->
   <script>
     const WHATSAPP_NUMBER = "5493513782218";
 
-    // 1. LISTA COMPLETA DE MARCAS CON SUS LOGOS OFICIALES
     const MARCAS = [
       { name: "Mercedes-Benz", domain: "mercedes-benz.com" },
       { name: "Volvo", domain: "volvogroup.com" },
@@ -486,7 +486,6 @@
 
     function renderizarMarcas() {
       const track = document.getElementById('brands-track');
-      // Duplicamos la lista para que el loop infinito no tenga cortes
       const listaDoble = [...MARCAS, ...MARCAS];
       track.innerHTML = listaDoble.map(m => `
         <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
@@ -501,7 +500,6 @@
     }
     renderizarMarcas();
 
-    // 2. LÓGICA DEL CARRUSEL PRINCIPAL ESTILO MERCADO LIBRE
     let slideActual = 0;
     const slides = document.querySelectorAll('.carousel-slide');
     const dots = document.querySelectorAll('.carousel-dot');
@@ -542,12 +540,19 @@
       timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
     }
 
-    // 3. BUSCADOR DEL HEADER Y FORMULARIO A WHATSAPP
     function buscarDesdeHeader(e) {
       e.preventDefault();
       const q = document.getElementById('header-search').value.trim();
       if (!q) return;
-      const msg = `Hola TP Truck Parts! Estoy buscando en la web: "${q}". ¿Tienen stock o equivalente?`;
+      const msg = `Hola TP Truck Parts! Estoy buscando: "${q}". ¿Tienen stock o equivalente?`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function buscarDesdeBloque(e) {
+      e.preventDefault();
+      const q = document.getElementById('bloque-search').value.trim();
+      if (!q) return;
+      const msg = `Hola TP Truck Parts! Busco este producto/código: "${q}". ¿Me pasan precio y disponibilidad?`;
       window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
