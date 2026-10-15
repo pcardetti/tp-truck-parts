@@ -1,568 +1,115 @@
-<!DOCTYPE html>
-<html lang="es-AR" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TP Truck Parts | Repuestos e Insumos para Camiones y Flotas</title>
-  <meta name="description" content="Venta y distribución de repuestos, filtros, frenos de aire, motor, embragues y lubricantes para camiones pesados y flotas en Las Varillas, Córdoba. Envíos a toda Argentina.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            tpYellow: '#FFB800',
-            tpYellowHover: '#E5A600',
-            tpBlack: '#0B0B0E',
-            tpDark: '#15161C',
-            tpCard: '#1C1E26'
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Oswald', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { background-color: #0B0B0E; color: #F5F5F7; overflow-x: hidden; }
+<!-- SECCIÓN CARRUSEL DE MARCAS -->
+<section class="py-12 bg-[#0B0C10] overflow-hidden border-y border-white/10">
+  <div class="relative w-full overflow-hidden py-4">
     
-    /* Animación Carrusel Infinito de Marcas (Lento y fluido) */
-    @keyframes marquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee {
-      display: flex;
-      width: max-content;
-      animation: marquee 55s linear infinite;
-    }
-    .animate-marquee:hover {
-      animation-play-state: paused;
-    }
+    <!-- Pista infinita (contiene el grupo original + el duplicado para el loop continuo) -->
+    <div class="animate-marquee gap-6 px-3">
 
-    /* Transición suave del Carrusel Principal */
-    .carousel-slide {
-      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-    }
+      <!-- ================= GRUPO 1 (10 MARCAS) ================= -->
+      
+      <!-- 1. SKF -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="skf.png" alt="SKF" class="max-w-[145px] max-h-[70px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
 
-    /* Efecto de destello por detrás y zoom en tarjetas de marcas */
-    .brand-card {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .brand-card:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px rgba(255, 184, 0, 0.4);
-      border-color: rgba(255, 184, 0, 0.65);
-    }
-  </style>
-</head>
-<body class="font-sans antialiased selection:bg-tpYellow selection:text-black">
+      <!-- 2. DAYCO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="dayco.png" alt="Dayco" class="max-w-[165px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
 
-  <!-- TOP BAR -->
-  <div class="bg-tpYellow text-black text-xs sm:text-sm font-extrabold py-2 px-4 shadow-sm">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <span class="flex items-center gap-1.5">⚡ REPUESTOS E INSUMOS PARA CAMIONES Y FLOTAS · ENVÍOS A TODA ARGENTINA</span>
-      <span class="hidden md:inline">📍 Int. José Irazusta 288 · Las Varillas, Córdoba | 📞 +54 9 351 378-2218</span>
+      <!-- 3. OSRAM -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="osram.png" alt="Osram" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 4. HELLA -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="hella.png" alt="Hella" class="max-w-[125px] max-h-[85px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 5. TRW -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="trw.png" alt="TRW" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 6. ZF -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="zf.png" alt="ZF" class="max-w-[100px] max-h-[82px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 7. EATON -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="eaton.png" alt="Eaton" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 8. IVECO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="iveco.jpg" alt="Iveco" class="max-w-[165px] max-h-[55px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
+      <!-- 9. VOLVO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="volvo.jpg" alt="Volvo" class="max-w-[110px] max-h-[86px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
+      <!-- 10. MERCEDES-BENZ -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none">
+        <img src="mercedes benz.jpg" alt="Mercedes-Benz" class="max-w-[105px] max-h-[84px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
+
+      <!-- ================= GRUPO 2 (DUPLICADO PARA LOOP INFINITO) ================= -->
+
+      <!-- 1. SKF -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="skf.png" alt="SKF" class="max-w-[145px] max-h-[70px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 2. DAYCO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="dayco.png" alt="Dayco" class="max-w-[165px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 3. OSRAM -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="osram.png" alt="Osram" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 4. HELLA -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="hella.png" alt="Hella" class="max-w-[125px] max-h-[85px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 5. TRW -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="trw.png" alt="TRW" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 6. ZF -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="zf.png" alt="ZF" class="max-w-[100px] max-h-[82px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 7. EATON -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="eaton.png" alt="Eaton" class="max-w-[160px] max-h-[55px] w-auto h-auto object-contain pointer-events-none" />
+      </div>
+
+      <!-- 8. IVECO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="iveco.jpg" alt="Iveco" class="max-w-[165px] max-h-[55px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
+      <!-- 9. VOLVO -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="volvo.jpg" alt="Volvo" class="max-w-[110px] max-h-[86px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
+      <!-- 10. MERCEDES-BENZ -->
+      <div class="brand-card min-w-[210px] h-36 p-6 bg-[#14151B] rounded-xl border border-white/10 flex items-center justify-center select-none" aria-hidden="true">
+        <img src="mercedes benz.jpg" alt="Mercedes-Benz" class="max-w-[105px] max-h-[84px] w-auto h-auto object-contain mix-blend-screen pointer-events-none" />
+      </div>
+
     </div>
   </div>
-
-  <!-- HEADER / NAVBAR (Sin barra de búsqueda) -->
-  <header class="sticky top-0 z-50 bg-tpBlack/90 backdrop-blur-lg border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
-      
-      <!-- LOGO OFICIAL -->
-      <a href="#" class="flex items-center group">
-        <div class="bg-white/95 hover:bg-white px-4 py-1.5 rounded-2xl shadow-[0_0_20px_rgba(255,184,0,0.25)] border-2 border-tpYellow transition transform group-hover:scale-105">
-          <img id="main-logo-header"
-               src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" 
-               alt="TP Truck Parts Logo" 
-               class="h-12 sm:h-14 w-auto object-contain">
-        </div>
-      </a>
-
-      <!-- NAV LINKS -->
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-neutral-300">
-        <a href="#categorias" class="hover:text-tpYellow transition">Categorías</a>
-        <a href="#marcas" class="hover:text-tpYellow transition">Marcas</a>
-        <a href="#cotizador" class="hover:text-tpYellow transition">Cotizar Chasis</a>
-        <a href="#contacto" class="hover:text-tpYellow transition">Mapa</a>
-      </nav>
-
-      <!-- CTA WHATSAPP -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20consultar%20por%20repuestos%20para%20mi%20cami%C3%B3n." 
-         target="_blank" rel="noopener noreferrer"
-         class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold text-xs sm:text-sm px-5 py-3 rounded-full shadow-lg shadow-tpYellow/20 transition transform hover:-translate-y-0.5 flex items-center gap-2 whitespace-nowrap">
-        <span>💬 WhatsApp Directo</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- CARRUSEL PRINCIPAL AMPLIO Y PROTAGONISTA -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-10">
-    <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 h-[420px] sm:h-[480px] bg-tpDark group">
-      
-      <!-- SLIDE 1: FRENOS Y AIRE -->
-      <div class="carousel-slide absolute inset-0 opacity-100 z-10" data-slide="0">
-        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=80" alt="Sistemas de Aire y Frenos" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">01 · Seguridad en Ruta</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Sistemas de <span class="text-tpYellow">Frenos y Aire</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Compresores, válvulas neumáticas, pulmones de freno, cintas y reparaciones para todas las líneas pesadas.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20repuestos%20de%20FRENOS%20Y%20AIRE." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Frenos y Aire →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 2: FILTRACIÓN PESADA -->
-      <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="1">
-        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1600&q=80" alt="Filtros Wega Mann para Camiones" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">02 · Filtración Completa</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Kits de <span class="text-tpYellow">Filtros Pesados</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Filtros de aire, aceite, combustible, trampas de agua e hidráulicos. Trabajamos con Wega y marcas originales.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20FILTROS%20para%20cami%C3%B3n." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Pedir Kit de Filtros →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 3: MOTOR Y REFRIGERACIÓN -->
-      <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="2">
-        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1600&q=80" alt="Motor y Refrigeración" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">03 · Alto Rendimiento</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Motor, SKF y <span class="text-tpYellow">Refrigeración</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Bombas de agua, tensores, rodamientos SKF, correas, juntas Cummins y fuelles de descarga con entrega inmediata.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20repuestos%20de%20MOTOR%20Y%20REFRIGERACI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Consultar por Chasis →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 4: EMBRAGUE Y TRANSMISIÓN -->
-      <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="3">
-        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=1600&q=80" alt="Embragues y Cajas" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">04 · Fuerza y Tracción</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Embragues y <span class="text-tpYellow">Transmisión</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Kits de embrague Sachs, cajas y repuestos Eaton y ZF, servos, crapodinas y crucetas para trabajo pesado.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20EMBRAGUE%20Y%20TRANSMISI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Transmisión →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 5: LUBRICANTES Y QUÍMICOS -->
-      <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="4">
-        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1600&q=80" alt="Lubricantes y Baterías" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">05 · Insumos de Flota</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Lubricantes, <span class="text-tpYellow">Moura y Würth</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Aceites y aditivos YPF, Shell, Valvoline, Liqui Moly, baterías Moura e insumos químicos Würth para talleres.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20LUBRICANTES%20Y%20BATER%C3%8DAS." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Consultar Insumos →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SLIDE 6: SUSPENSIÓN E ILUMINACIÓN -->
-      <div class="carousel-slide absolute inset-0 opacity-0 z-0" data-slide="5">
-        <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1600&q=80" alt="Suspensión e Iluminación" class="w-full h-full object-cover object-center brightness-50">
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent flex items-center">
-          <div class="p-8 sm:p-14 max-w-2xl space-y-4">
-            <span class="inline-block bg-tpYellow text-black text-xs font-extrabold uppercase px-3 py-1 rounded-full">06 · Chasis y Cabina</span>
-            <h2 class="font-display text-4xl sm:text-6xl font-bold uppercase text-white leading-none">Suspensión TRW e <span class="text-tpYellow">Iluminación Hella</span></h2>
-            <p class="text-neutral-200 text-sm sm:text-lg">Fuelles neumáticos, amortiguadores, dirección TRW, faros Hella y accesorios para camiones y acoplados.</p>
-            <div class="pt-2 flex flex-wrap gap-3">
-              <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20quiero%20cotizar%20SUSPENSI%C3%93N." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm uppercase tracking-wide transition shadow-lg">Cotizar Repuestos →</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FLECHAS DEL CARRUSEL -->
-      <button onclick="cambiarSlide(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg text-lg">
-        ❮
-      </button>
-      <button onclick="cambiarSlide(1)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-tpYellow text-white hover:text-black font-bold flex items-center justify-center transition shadow-lg text-lg">
-        ❯
-      </button>
-
-      <!-- INDICADORES -->
-      <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2.5 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full">
-        <button onclick="irASlide(0)" class="carousel-dot w-6 h-2.5 rounded-full bg-tpYellow transition-all"></button>
-        <button onclick="irASlide(1)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
-        <button onclick="irASlide(2)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
-        <button onclick="irASlide(3)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
-        <button onclick="irASlide(4)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
-        <button onclick="irASlide(5)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all"></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOQUE DE BÚSQUEDA PRINCIPAL (Única barra debajo del carrusel) -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-    <div class="bg-tpCard border border-white/15 rounded-3xl p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto text-center space-y-4">
-      <h3 class="font-display text-2xl font-bold uppercase text-white">Buscar productos por nombre o código</h3>
-      <form onsubmit="buscarDesdeBloque(event)" class="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <input id="bloque-search" type="text" placeholder="Escribir búsqueda (ej: W712, embrague Sachs, filtro aire...)" class="w-full sm:flex-1 bg-tpBlack border border-white/20 focus:border-tpYellow rounded-2xl px-5 py-3.5 text-sm text-white placeholder-neutral-400 outline-none transition">
-        <button type="submit" class="w-full sm:w-auto bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-8 py-3.5 rounded-2xl text-sm uppercase tracking-wide transition shadow-md whitespace-nowrap">
-          Buscar productos
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- BURBUJAS DE CATEGORÍAS -->
-  <section id="categorias" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <div class="flex items-center justify-between mb-8">
-      <div>
-        <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Acceso Rápido</span>
-        <h2 class="font-display text-2xl sm:text-3xl font-bold uppercase text-white">Elegí la categoría que buscás</h2>
-      </div>
-      <a href="#cotizador" class="text-xs sm:text-sm font-bold text-tpYellow hover:underline">¿Tenés número de pieza? Cotizá acá →</a>
-    </div>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-5">
-      <!-- Cat 1 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20repuestos%20de%20AIRE%20Y%20FRENOS." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=400&q=80" alt="Aire y Frenos" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Aire y Frenos</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">Compresores, válvulas y pulmones</span>
-      </a>
-
-      <!-- Cat 2 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20FILTROS%20(Wega%20/%20L%C3%ADnea%20Pesada)." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Filtros Pesados" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Filtración</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">Aire, aceite, combustible y agua</span>
-      </a>
-
-      <!-- Cat 3 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20repuestos%20de%20MOTOR%20Y%20SKF." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=400&q=80" alt="Motor y Rodamientos SKF" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Motor y SKF</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">Bombas, tensores, juntas y correas</span>
-      </a>
-
-      <!-- Cat 4 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20EMBRAGUES%20SACHS%20O%20CAJAS%20EATON%20/%20ZF." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&w=400&q=80" alt="Embragues y Cajas" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Transmisión</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">Embragues Sachs, Eaton y ZF</span>
-      </a>
-
-      <!-- Cat 5 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20SUSPENSI%C3%93N%20Y%20DIRECCI%C3%93N%20TRW." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=400&q=80" alt="Suspensión y Dirección" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Suspensión y TRW</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">Amortiguadores, fuelles y barras</span>
-      </a>
-
-      <!-- Cat 6 -->
-      <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20busco%20LUBRICANTES%2C%20BATER%C3%8DAS%20MOURA%20O%20ILUMINACI%C3%93N%20HELLA." target="_blank" 
-         class="bg-tpCard hover:bg-tpDark border border-white/10 hover:border-tpYellow rounded-3xl p-5 flex flex-col items-center text-center group transition transform hover:-translate-y-1 shadow-lg">
-        <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-tpYellow/50 group-hover:border-tpYellow mb-4 shadow-md">
-          <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=400&q=80" alt="Lubricantes, Moura y Hella" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
-        </div>
-        <h3 class="font-bold text-white group-hover:text-tpYellow text-sm sm:text-base transition">Aceites y Accesorios</h3>
-        <span class="text-[11px] text-neutral-400 mt-1">YPF, Shell, Liqui Moly, Moura, Hella</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Solo logos grandes, tarjetas oscuras, zoom y destello) -->
-  <section id="marcas" class="py-14 my-8 bg-tpDark border-y border-white/10 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
-      <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Marcas Líderes & Repuestos Originales</span>
-      <h2 class="font-display text-3xl sm:text-4xl font-bold uppercase text-white mt-1">Trabajamos con las mejores marcas del mercado</h2>
-    </div>
-    <div class="relative w-full overflow-hidden py-8">
-      <div class="animate-marquee gap-6 items-center">
-        <div id="brands-track" class="flex gap-6 items-center px-4"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COTIZADOR POR CHASIS -->
-  <section id="cotizador" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-12 gap-10 items-center">
-      <div class="lg:col-span-5 space-y-6">
-        <span class="inline-block bg-tpYellow/15 text-tpYellow border border-tpYellow/30 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase">Atención a Flotas, Talleres y Particulares</span>
-        <h2 class="font-display text-4xl sm:text-5xl font-bold uppercase text-white leading-tight">
-          Menos vueltas. <br><span class="text-tpYellow">Más ruta.</span>
-        </h2>
-        <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
-          Pasános la marca, el código OEM o los últimos números de chasis y te confirmamos compatibilidad exacta y stock en el acto desde Las Varillas.
-        </p>
-        <div class="space-y-3 pt-2">
-          <div class="bg-tpCard p-4 rounded-2xl border border-white/10 flex items-center gap-4">
-            <span class="w-10 h-10 rounded-xl bg-tpYellow text-black font-extrabold flex items-center justify-center shrink-0">01</span>
-            <div>
-              <h3 class="font-bold text-white text-sm">Despachos en el día a todo el país</h3>
-              <p class="text-xs text-neutral-400">Coordinamos envíos urgentes para que el camión no pierda viaje.</p>
-            </div>
-          </div>
-          <div class="bg-tpCard p-4 rounded-2xl border border-white/10 flex items-center gap-4">
-            <span class="w-10 h-10 rounded-xl bg-tpYellow text-black font-extrabold flex items-center justify-center shrink-0">02</span>
-            <div>
-              <h3 class="font-bold text-white text-sm">Cuentas para Flotas, Agro y Talleres</h3>
-              <p class="text-xs text-neutral-400">Armamos presupuestos integrales para mantenimiento preventivo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="lg:col-span-7 bg-tpCard border-2 border-tpYellow/60 rounded-3xl p-6 sm:p-10 shadow-2xl">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4 mb-6">
-          <div>
-            <h3 class="font-display text-2xl sm:text-3xl font-bold uppercase text-white">Cotizador Rápido por <span class="text-tpYellow">Chasis / Código</span></h3>
-            <p class="text-xs text-neutral-400">Completá los datos y se abrirá tu WhatsApp con el pedido armado.</p>
-          </div>
-          <span class="bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-bold px-3 py-1 rounded-full">● Respuesta Inmediata</span>
-        </div>
-
-        <form onsubmit="enviarCotizacionCompleta(event)" class="space-y-4">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-bold uppercase text-neutral-300 mb-1.5">Nombre o Empresa / Taller</label>
-              <input id="form-nombre" type="text" required placeholder="Ej: Transporte Sur / Taller Pérez" class="w-full bg-tpBlack border border-white/15 focus:border-tpYellow rounded-xl px-4 py-3 text-sm text-white outline-none transition">
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-neutral-300 mb-1.5">Tipo de Cliente</label>
-              <select id="form-tipo" class="w-full bg-tpBlack border border-white/15 focus:border-tpYellow rounded-xl px-4 py-3 text-sm text-white outline-none transition">
-                <option value="Transportista / Particular">Transportista / Particular</option>
-                <option value="Taller Mecánico">Taller Mecánico</option>
-                <option value="Flota / Logística">Flota / Empresa de Transporte</option>
-                <option value="Agro / Vial">Empresa Agropecuaria / Vial</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-bold uppercase text-neutral-300 mb-1.5">Camión / Marca buscada</label>
-              <input id="form-camion" type="text" required placeholder="Ej: Scania G410 / Iveco / VW / Volvo" class="w-full bg-tpBlack border border-white/15 focus:border-tpYellow rounded-xl px-4 py-3 text-sm text-white outline-none transition">
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase text-neutral-300 mb-1.5">N° de Chasis o Código OEM</label>
-              <input id="form-chasis" type="text" placeholder="Opcional (ej: últimos 7 del chasis)" class="w-full bg-tpBlack border border-white/15 focus:border-tpYellow rounded-xl px-4 py-3 text-sm text-white outline-none transition">
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-bold uppercase text-neutral-300 mb-1.5">¿Qué repuestos o insumos necesitás?</label>
-            <textarea id="form-detalle" rows="3" required placeholder="Ej: Kit de embrague Sachs, filtros Wega, batería Moura, bomba de agua..." class="w-full bg-tpBlack border border-white/15 focus:border-tpYellow rounded-xl px-4 py-3 text-sm text-white outline-none transition"></textarea>
-          </div>
-
-          <button type="submit" class="w-full bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold py-4 rounded-2xl uppercase tracking-wide text-sm transition shadow-lg shadow-tpYellow/20">
-            Enviar Cotización por WhatsApp (+54 9 351 378-2218) →
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- UBICACIÓN + MAPS -->
-  <section id="contacto" class="bg-tpDark border-t border-white/10 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-5 space-y-5">
-          <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Mostrador & Logística</span>
-          <h2 class="font-display text-4xl font-bold uppercase text-white">Encontranos en <span class="text-tpYellow">Las Varillas, Córdoba</span></h2>
-          <p class="text-sm text-neutral-300">
-            Retirá en nuestro local o pedí despacho en el día por comisionista, transporte o correo a cualquier punto del país.
-          </p>
-          <div class="space-y-3 text-sm">
-            <div class="p-4 bg-tpCard rounded-2xl border border-white/10">
-              <strong class="text-tpYellow block uppercase text-xs">Dirección Física</strong>
-              <span class="text-white font-semibold text-base">Int. José Irazusta 288, Las Varillas, Córdoba</span>
-            </div>
-            <div class="p-4 bg-tpCard rounded-2xl border border-white/10">
-              <strong class="text-tpYellow block uppercase text-xs">WhatsApp Ventas</strong>
-              <a href="https://wa.me/5493513782218" target="_blank" class="text-white hover:text-tpYellow font-semibold text-base">+54 9 351 378-2218</a>
-            </div>
-          </div>
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20te%20escribo%20desde%20la%20web." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm transition">
-              Hablar con Mostrador
-            </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Int.+Jos%C3%A9+Irazusta+288,+Las+Varillas,+C%C3%B3rdoba" target="_blank" class="bg-tpCard hover:bg-neutral-800 text-white border border-white/15 font-semibold px-6 py-3.5 rounded-full text-sm transition">
-              Cómo llegar en Google Maps
-            </a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-7">
-          <div class="rounded-3xl overflow-hidden border-2 border-tpYellow/60 shadow-2xl h-[380px] w-full bg-tpBlack">
-            <iframe 
-              src="https://maps.google.com/maps?q=Int.%20Jos%C3%A9%20Irazusta%20288,%20Las%20Varillas,%20C%C3%B3rdoba,%20Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Ubicación TP Truck Parts en Las Varillas">
-            </iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-tpBlack border-t border-white/10 py-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
-      <div class="flex items-center gap-4">
-        <div class="bg-white px-3 py-1 rounded-xl border border-tpYellow">
-          <img id="main-logo-footer" src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" alt="TP Truck Parts" class="h-8 w-auto object-contain">
-        </div>
-        <span>© 2026 <strong class="text-white">TP TRUCK PARTS</strong> · Int. José Irazusta 288, Las Varillas, Córdoba.</span>
-      </div>
-      <div>
-        Atención por WhatsApp: <a href="https://wa.me/5493513782218" class="text-tpYellow font-bold hover:underline">+54 9 351 378-2218</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script>
-    const WHATSAPP_NUMBER = "5493513782218";
-
-    // Lista de marcas preparada para pegar links directos a PNGs transparentes en el campo "logo"
-    const MARCAS = [
-      { name: "Mercedes-Benz", domain: "mercedes-benz.com", logo: "" },
-      { name: "Volvo", domain: "volvogroup.com", logo: "" },
-      { name: "Scania", domain: "scania.com", logo: "" },
-      { name: "Iveco", domain: "iveco.com", logo: "" },
-      { name: "Volkswagen", domain: "vw.com", logo: "" },
-      { name: "Ford", domain: "ford.com", logo: "" },
-      { name: "Eaton", domain: "eaton.com", logo: "" },
-      { name: "ZF", domain: "zf.com", logo: "" },
-      { name: "Sachs", domain: "zf.com", logo: "" },
-      { name: "TRW", domain: "trwaftermarket.com", logo: "" },
-      { name: "SKF", domain: "skf.com", logo: "" },
-      { name: "Wega", domain: "wega.com.ar", logo: "" },
-      { name: "Moura", domain: "moura.com.br", logo: "" },
-      { name: "Würth", domain: "wuerth.com", logo: "" },
-      { name: "Liqui Moly", domain: "liqui-moly.com", logo: "" },
-      { name: "Hella", domain: "hella.com", logo: "" },
-      { name: "Valvoline", domain: "valvolineglobal.com", logo: "" },
-      { name: "YPF", domain: "ypf.com", logo: "" },
-      { name: "Shell", domain: "shell.com", logo: "" },
-      { name: "Cummins", domain: "cummins.com", logo: "" },
-      { name: "Mann-Filter", domain: "mann-filter.com", logo: "" },
-      { name: "Bosch", domain: "bosch.com", logo: "" }
-    ];
-
-    function renderizarMarcas() {
-      const track = document.getElementById('brands-track');
-      const listaDoble = [...MARCAS, ...MARCAS];
-      track.innerHTML = listaDoble.map(m => {
-        const imgUrl = m.logo || `https://www.google.com/s2/favicons?domain=${m.domain}&sz=256`;
-        return `
-          <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
-             target="_blank"
-             title="${m.name}"
-             class="brand-card group bg-[#14151B] hover:bg-[#1C1E26] rounded-3xl p-6 min-w-[210px] h-36 flex items-center justify-center shrink-0 border border-white/10">
-            <img src="${imgUrl}" 
-                 alt="${m.name}" 
-                 class="h-16 sm:h-20 max-w-[160px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 filter brightness-110">
-          </a>
-        `;
-      }).join('');
-    }
-    renderizarMarcas();
-
-    let slideActual = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-
-    function mostrarSlide(index) {
-      slideActual = (index + slides.length) % slides.length;
-      slides.forEach((s, i) => {
-        if (i === slideActual) {
-          s.classList.remove('opacity-0', 'z-0');
-          s.classList.add('opacity-100', 'z-10');
-        } else {
-          s.classList.remove('opacity-100', 'z-10');
-          s.classList.add('opacity-0', 'z-0');
-        }
-      });
-      dots.forEach((d, i) => {
-        if (i === slideActual) {
-          d.className = "carousel-dot w-7 h-2.5 rounded-full bg-tpYellow transition-all";
-        } else {
-          d.className = "carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all";
-        }
-      });
-    }
-
-    function cambiarSlide(direccion) {
-      mostrarSlide(slideActual + direccion);
-      reiniciarTimer();
-    }
-
-    function irASlide(index) {
-      mostrarSlide(index);
-      reiniciarTimer();
-    }
-
-    let timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
-    function reiniciarTimer() {
-      clearInterval(timerCarrusel);
-      timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
-    }
-
-    function buscarDesdeBloque(e) {
-      e.preventDefault();
-      const q = document.getElementById('bloque-search').value.trim();
-      if (!q) return;
-      const msg = `Hola TP Truck Parts! Busco este producto/código: "${q}". ¿Me pasan precio y disponibilidad?`;
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-    }
-
-    function enviarCotizacionCompleta(e) {
-      e.preventDefault();
-      const nombre = document.getElementById('form-nombre').value;
-      const tipo = document.getElementById('form-tipo').value;
-      const camion = document.getElementById('form-camion').value;
-      const chasis = document.getElementById('form-chasis').value || "A confirmar";
-      const detalle = document.getElementById('form-detalle').value;
-
-      const mensaje = `Hola TP Truck Parts! Solicito cotización desde la web:\n• Cliente: ${nombre} (${tipo})\n• Camión/Marca: ${camion}\n• Chasis/Código OEM: ${chasis}\n• Pedido: ${detalle}`;
-      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, '_blank');
-    }
-  </script>
-</body>
-</html>
+</section>
