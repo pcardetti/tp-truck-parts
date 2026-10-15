@@ -37,7 +37,7 @@
     .animate-marquee {
       display: flex;
       width: max-content;
-      animation: marquee 55s linear infinite;
+      animation: marquee 60s linear infinite;
     }
     .animate-marquee:hover {
       animation-play-state: paused;
@@ -477,25 +477,25 @@
   <script>
     const WHATSAPP_NUMBER = "5493513782218";
 
-    // Las 17 marcas integradas con sus archivos locales y proporción adaptada a cada logo
+    // Las 17 marcas apuntando a la carpeta img/ de tu repositorio
     const MARCAS = [
-      { name: "SKF", logo: "skf.png", sizeClass: "max-w-[145px] max-h-[70px]" },
-      { name: "Dayco", logo: "dayco.png", sizeClass: "max-w-[165px] max-h-[55px]" },
-      { name: "Osram", logo: "osram.png", sizeClass: "max-w-[160px] max-h-[55px]" },
-      { name: "Hella", logo: "hella.png", sizeClass: "max-w-[125px] max-h-[85px]" },
-      { name: "TRW", logo: "trw.png", sizeClass: "max-w-[160px] max-h-[55px]" },
-      { name: "ZF", logo: "zf.png", sizeClass: "max-w-[100px] max-h-[82px]" },
-      { name: "Eaton", logo: "eaton.png", sizeClass: "max-w-[160px] max-h-[55px]" },
-      { name: "Iveco", logo: "iveco.jpg", sizeClass: "max-w-[165px] max-h-[55px] mix-blend-screen" },
-      { name: "Volvo", logo: "volvo.jpg", sizeClass: "max-w-[110px] max-h-[86px] mix-blend-screen" },
-      { name: "Mercedes-Benz", logo: "mercedes benz.jpg", sizeClass: "max-w-[105px] max-h-[84px] mix-blend-screen" },
-      { name: "Sachs", logo: "sachs.png", sizeClass: "max-w-[140px] max-h-[82px]" },
-      { name: "Volkswagen", logo: "vw.png", sizeClass: "max-w-[100px] max-h-[82px]" },
-      { name: "Ford", logo: "ford.jpg", sizeClass: "max-w-[170px] max-h-[95px] mix-blend-screen" },
-      { name: "YPF", logo: "ypf.png", sizeClass: "max-w-[145px] max-h-[52px]" },
-      { name: "Liqui Moly", logo: "liquimoly.png", sizeClass: "max-w-[130px] max-h-[76px]" },
-      { name: "Valvoline", logo: "valvoline.png", sizeClass: "max-w-[150px] max-h-[95px]" },
-      { name: "Bosch", logo: "bosch.jpg", sizeClass: "max-w-[165px] max-h-[60px] mix-blend-screen" }
+      { name: "SKF", logo: "img/skf.png", sizeClass: "max-w-[145px] max-h-[70px]" },
+      { name: "Dayco", logo: "img/dayco.png", sizeClass: "max-w-[165px] max-h-[55px]" },
+      { name: "Osram", logo: "img/osram.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "Hella", logo: "img/hella.png", sizeClass: "max-w-[125px] max-h-[85px]" },
+      { name: "TRW", logo: "img/trw.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "ZF", logo: "img/zf.png", sizeClass: "max-w-[100px] max-h-[82px]" },
+      { name: "Eaton", logo: "img/eaton.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "Iveco", logo: "img/iveco.jpg", sizeClass: "max-w-[165px] max-h-[55px] mix-blend-screen" },
+      { name: "Volvo", logo: "img/volvo.jpg", sizeClass: "max-w-[110px] max-h-[86px] mix-blend-screen" },
+      { name: "Mercedes-Benz", logo: "img/mercedes benz.jpg", sizeClass: "max-w-[105px] max-h-[84px] mix-blend-screen" },
+      { name: "Sachs", logo: "img/sachs.png", sizeClass: "max-w-[140px] max-h-[82px]" },
+      { name: "Volkswagen", logo: "img/vw.png", sizeClass: "max-w-[100px] max-h-[82px]" },
+      { name: "Ford", logo: "img/ford.jpg", sizeClass: "max-w-[170px] max-h-[95px] mix-blend-screen" },
+      { name: "YPF", logo: "img/ypf.png", sizeClass: "max-w-[145px] max-h-[52px]" },
+      { name: "Liqui Moly", logo: "img/liquimoly.png", sizeClass: "max-w-[130px] max-h-[76px]" },
+      { name: "Valvoline", logo: "img/valvoline.png", sizeClass: "max-w-[150px] max-h-[95px]" },
+      { name: "Bosch", logo: "img/bosch.jpg", sizeClass: "max-w-[165px] max-h-[60px] mix-blend-screen" }
     ];
 
     function renderizarMarcas() {
