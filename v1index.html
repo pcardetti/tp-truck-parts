@@ -92,14 +92,12 @@
   <header class="sticky top-0 z-50 bg-tpBlack/90 backdrop-blur-lg border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between gap-4">
       
-      <!-- LOGO OFICIAL (Contenedor prolijo integrado al diseño oscuro) -->
-      <a href="#" class="flex items-center group">
-        <div class="bg-white px-3.5 py-1.5 rounded-2xl shadow-[0_0_20px_rgba(255,184,0,0.25)] border-2 border-tpYellow transition transform group-hover:scale-105">
-          <img id="main-logo-header"
-               src="img/logo%20truck%20nuevo.jpeg" 
-               alt="TP Truck Parts Logo" 
-               class="h-10 sm:h-12 w-auto object-contain">
-        </div>
+      <!-- LOGO OFICIAL EN PNG TRANSPARENTE (Sin fondo blanco) -->
+      <a href="#" class="flex items-center group py-2">
+        <img id="main-logo-header"
+             src="img/logo%20truck%20nuevo.png" 
+             alt="TP Truck Parts Logo" 
+             class="h-11 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 filter drop-shadow-[0_0_8px_rgba(255,184,0,0.25)]">
       </a>
 
       <!-- NAV LINKS -->
@@ -427,4 +425,140 @@
             <a href="https://wa.me/5493513782218?text=Hola%20TP%20Truck%20Parts%2C%20te%20escribo%20desde%20la%20web." target="_blank" class="bg-tpYellow hover:bg-tpYellowHover text-black font-extrabold px-6 py-3.5 rounded-full text-sm transition">
               Hablar con Mostrador
             </a>
-            <a href="
+            <a href="https://www.google.com/maps/search/?api=1&query=Int.+Jos%C3%A9+Irazusta+288,+Las+Varillas,+C%C3%B3rdoba" target="_blank" class="bg-tpCard hover:bg-neutral-800 text-white border border-white/15 font-semibold px-6 py-3.5 rounded-full text-sm transition">
+              Cómo llegar en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border-2 border-tpYellow/60 shadow-2xl h-[380px] w-full bg-tpBlack">
+            <iframe 
+              src="https://maps.google.com/maps?q=Int.%20Jos%C3%A9%20Irazusta%20288,%20Las%20Varillas,%20C%C3%B3rdoba,%20Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación TP Truck Parts en Las Varillas">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-tpBlack border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
+      <div class="flex items-center gap-4">
+        <img id="main-logo-footer" src="img/logo%20truck%20nuevo.png" alt="TP Truck Parts" class="h-8 w-auto object-contain">
+        <span>© 2026 <strong class="text-white">TP TRUCK PARTS</strong> · Int. José Irazusta 288, Las Varillas, Córdoba.</span>
+      </div>
+      <div>
+        Atención por WhatsApp: <a href="https://wa.me/5493513782218" class="text-tpYellow font-bold hover:underline">+54 9 351 378-2218</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    const WHATSAPP_NUMBER = "5493513782218";
+
+    const MARCAS = [
+      { name: "SKF", logo: "img/skf.png", sizeClass: "max-w-[145px] max-h-[70px]" },
+      { name: "Dayco", logo: "img/dayco.png", sizeClass: "max-w-[165px] max-h-[55px]" },
+      { name: "Osram", logo: "img/osram.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "Hella", logo: "img/hella.png", sizeClass: "max-w-[125px] max-h-[85px]" },
+      { name: "TRW", logo: "img/trw.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "ZF", logo: "img/zf.png", sizeClass: "max-w-[100px] max-h-[82px]" },
+      { name: "Eaton", logo: "img/eaton.png", sizeClass: "max-w-[160px] max-h-[55px]" },
+      { name: "Iveco", logo: "img/iveco.jpg", sizeClass: "max-w-[165px] max-h-[55px] mix-blend-screen" },
+      { name: "Volvo", logo: "img/volvo.jpg", sizeClass: "max-w-[110px] max-h-[86px] mix-blend-screen" },
+      { name: "Mercedes-Benz", logo: "img/mercedes benz.jpg", sizeClass: "max-w-[105px] max-h-[84px] mix-blend-screen" },
+      { name: "Sachs", logo: "img/sachs.png", sizeClass: "max-w-[140px] max-h-[82px]" },
+      { name: "Volkswagen", logo: "img/vw.png", sizeClass: "max-w-[100px] max-h-[82px]" },
+      { name: "Ford", logo: "img/ford.jpg", sizeClass: "max-w-[170px] max-h-[95px] mix-blend-screen" },
+      { name: "YPF", logo: "img/ypf.png", sizeClass: "max-w-[145px] max-h-[52px]" },
+      { name: "Liqui Moly", logo: "img/liquimoly.png", sizeClass: "max-w-[130px] max-h-[76px]" },
+      { name: "Valvoline", logo: "img/valvoline.png", sizeClass: "max-w-[150px] max-h-[95px]" },
+      { name: "Bosch", logo: "img/bosch.jpg", sizeClass: "max-w-[165px] max-h-[60px] mix-blend-screen" }
+    ];
+
+    function renderizarMarcas() {
+      const track = document.getElementById('brands-track');
+      const listaDoble = [...MARCAS, ...MARCAS];
+      track.innerHTML = listaDoble.map(m => `
+        <div title="${m.name}"
+             class="brand-card group bg-[#14151B] hover:bg-[#1C1E26] rounded-3xl p-6 min-w-[210px] h-36 flex items-center justify-center shrink-0 border border-white/10 select-none">
+          <img src="${m.logo}" 
+               alt="${m.name}" 
+               class="${m.sizeClass} w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-110 filter brightness-110 pointer-events-none">
+        </div>
+      `).join('');
+    }
+    renderizarMarcas();
+
+    let slideActual = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    function mostrarSlide(index) {
+      slideActual = (index + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        if (i === slideActual) {
+          s.classList.remove('opacity-0', 'z-0');
+          s.classList.add('opacity-100', 'z-10');
+        } else {
+          s.classList.remove('opacity-100', 'z-10');
+          s.classList.add('opacity-0', 'z-0');
+        }
+      });
+      dots.forEach((d, i) => {
+        if (i === slideActual) {
+          d.className = "carousel-dot w-7 h-2.5 rounded-full bg-tpYellow transition-all";
+        } else {
+          d.className = "carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all";
+        }
+      });
+    }
+
+    function cambiarSlide(direccion) {
+      mostrarSlide(slideActual + direccion);
+      reiniciarTimer();
+    }
+
+    function irASlide(index) {
+      mostrarSlide(index);
+      reiniciarTimer();
+    }
+
+    let timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
+    function reiniciarTimer() {
+      clearInterval(timerCarrusel);
+      timerCarrusel = setInterval(() => mostrarSlide(slideActual + 1), 4500);
+    }
+
+    function buscarDesdeBloque(e) {
+      e.preventDefault();
+      const q = document.getElementById('bloque-search').value.trim();
+      if (!q) return;
+      const msg = `Hola TP Truck Parts! Busco este producto/código: "${q}". ¿Me pasan precio y disponibilidad?`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function enviarCotizacionCompleta(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('form-nombre').value;
+      const tipo = document.getElementById('form-tipo').value;
+      const camion = document.getElementById('form-camion').value;
+      const chasis = document.getElementById('form-chasis').value || "A confirmar";
+      const detalle = document.getElementById('form-detalle').value;
+
+      const mensaje = `Hola TP Truck Parts! Solicito cotización desde la web:\n• Cliente: ${nombre} (${tipo})\n• Camión/Marca: ${camion}\n• Chasis/Código OEM: ${chasis}\n• Pedido: ${detalle}`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
