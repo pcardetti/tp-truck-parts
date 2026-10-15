@@ -48,14 +48,14 @@
       transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
     }
 
-    /* Efecto de destello y zoom en tarjetas de marcas */
+    /* Efecto de destello por detrás y zoom en tarjetas de marcas */
     .brand-card {
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .brand-card:hover {
-      transform: scale(1.06);
-      box-shadow: 0 0 25px rgba(255, 184, 0, 0.35);
-      border-color: rgba(255, 184, 0, 0.6);
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(255, 184, 0, 0.4);
+      border-color: rgba(255, 184, 0, 0.65);
     }
   </style>
 </head>
@@ -76,7 +76,8 @@
       <!-- LOGO OFICIAL -->
       <a href="#" class="flex items-center group">
         <div class="bg-white/95 hover:bg-white px-4 py-1.5 rounded-2xl shadow-[0_0_20px_rgba(255,184,0,0.25)] border-2 border-tpYellow transition transform group-hover:scale-105">
-          <img src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" 
+          <img id="main-logo-header"
+               src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" 
                alt="TP Truck Parts Logo" 
                class="h-12 sm:h-14 w-auto object-contain">
         </div>
@@ -299,7 +300,7 @@
     </div>
   </section>
 
-  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Tarjetas oscuras, zoom y destello) -->
+  <!-- CARRUSEL GIRATORIO INFINITO DE MARCAS (Solo logos grandes, tarjetas oscuras, zoom y destello) -->
   <section id="marcas" class="py-14 my-8 bg-tpDark border-y border-white/10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
       <span class="text-tpYellow text-xs font-extrabold uppercase tracking-widest">Marcas Líderes & Repuestos Originales</span>
@@ -444,7 +445,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-xs text-neutral-400">
       <div class="flex items-center gap-4">
         <div class="bg-white px-3 py-1 rounded-xl border border-tpYellow">
-          <img src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" alt="TP Truck Parts" class="h-8 w-auto object-contain">
+          <img id="main-logo-footer" src="https://i.ibb.co/5XLzVwYx/3e0e46a8-76e2-46a4-8c72-cbbef5a047a3.png" alt="TP Truck Parts" class="h-8 w-auto object-contain">
         </div>
         <span>© 2026 <strong class="text-white">TP TRUCK PARTS</strong> · Int. José Irazusta 288, Las Varillas, Córdoba.</span>
       </div>
@@ -458,44 +459,48 @@
   <script>
     const WHATSAPP_NUMBER = "5493513782218";
 
+    // Lista de marcas preparada para pegar links directos a PNGs transparentes en el campo "logo"
     const MARCAS = [
-      { name: "Mercedes-Benz", domain: "mercedes-benz.com" },
-      { name: "Volvo", domain: "volvogroup.com" },
-      { name: "Scania", domain: "scania.com" },
-      { name: "Iveco", domain: "iveco.com" },
-      { name: "Volkswagen", domain: "vw.com" },
-      { name: "Ford", domain: "ford.com" },
-      { name: "Eaton", domain: "eaton.com" },
-      { name: "ZF", domain: "zf.com" },
-      { name: "Sachs", domain: "zf.com" },
-      { name: "TRW", domain: "trwaftermarket.com" },
-      { name: "SKF", domain: "skf.com" },
-      { name: "Wega", domain: "wega.com.ar" },
-      { name: "Moura", domain: "moura.com.br" },
-      { name: "Würth", domain: "wuerth.com" },
-      { name: "Liqui Moly", domain: "liqui-moly.com" },
-      { name: "Hella", domain: "hella.com" },
-      { name: "Valvoline", domain: "valvolineglobal.com" },
-      { name: "YPF", domain: "ypf.com" },
-      { name: "Shell", domain: "shell.com" },
-      { name: "Cummins", domain: "cummins.com" },
-      { name: "Mann-Filter", domain: "mann-filter.com" },
-      { name: "Bosch", domain: "bosch.com" }
+      { name: "Mercedes-Benz", domain: "mercedes-benz.com", logo: "" },
+      { name: "Volvo", domain: "volvogroup.com", logo: "" },
+      { name: "Scania", domain: "scania.com", logo: "" },
+      { name: "Iveco", domain: "iveco.com", logo: "" },
+      { name: "Volkswagen", domain: "vw.com", logo: "" },
+      { name: "Ford", domain: "ford.com", logo: "" },
+      { name: "Eaton", domain: "eaton.com", logo: "" },
+      { name: "ZF", domain: "zf.com", logo: "" },
+      { name: "Sachs", domain: "zf.com", logo: "" },
+      { name: "TRW", domain: "trwaftermarket.com", logo: "" },
+      { name: "SKF", domain: "skf.com", logo: "" },
+      { name: "Wega", domain: "wega.com.ar", logo: "" },
+      { name: "Moura", domain: "moura.com.br", logo: "" },
+      { name: "Würth", domain: "wuerth.com", logo: "" },
+      { name: "Liqui Moly", domain: "liqui-moly.com", logo: "" },
+      { name: "Hella", domain: "hella.com", logo: "" },
+      { name: "Valvoline", domain: "valvolineglobal.com", logo: "" },
+      { name: "YPF", domain: "ypf.com", logo: "" },
+      { name: "Shell", domain: "shell.com", logo: "" },
+      { name: "Cummins", domain: "cummins.com", logo: "" },
+      { name: "Mann-Filter", domain: "mann-filter.com", logo: "" },
+      { name: "Bosch", domain: "bosch.com", logo: "" }
     ];
 
     function renderizarMarcas() {
       const track = document.getElementById('brands-track');
       const listaDoble = [...MARCAS, ...MARCAS];
-      track.innerHTML = listaDoble.map(m => `
-        <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
-           target="_blank"
-           class="brand-card bg-[#14151B] hover:bg-[#1C1E26] transition-all duration-300 rounded-3xl p-6 min-w-[200px] h-32 flex flex-col items-center justify-center shrink-0 border border-white/10">
-          <img src="https://www.google.com/s2/favicons?domain=${m.domain}&sz=256" 
-               alt="${m.name}" 
-               class="h-10 w-auto object-contain mb-2 filter brightness-125">
-          <span class="font-display font-bold text-sm uppercase tracking-wider text-neutral-300">${m.name}</span>
-        </a>
-      `).join('');
+      track.innerHTML = listaDoble.map(m => {
+        const imgUrl = m.logo || `https://www.google.com/s2/favicons?domain=${m.domain}&sz=256`;
+        return `
+          <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hola TP Truck Parts, consulto por repuestos o productos marca ' + m.name)}" 
+             target="_blank"
+             title="${m.name}"
+             class="brand-card group bg-[#14151B] hover:bg-[#1C1E26] rounded-3xl p-6 min-w-[210px] h-36 flex items-center justify-center shrink-0 border border-white/10">
+            <img src="${imgUrl}" 
+                 alt="${m.name}" 
+                 class="h-16 sm:h-20 max-w-[160px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 filter brightness-110">
+          </a>
+        `;
+      }).join('');
     }
     renderizarMarcas();
 
